@@ -1,4 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import "./index.css";
+
+function App() {
+  const [mensagem, setMensagem] = useState("");
+
+  return (
+    <div className="app-container">
+      {/* Cabeçalho com logo */}
+      <header className="header">
+        <img src="/logo.png" alt="Logo Abastece+" className="logo" />
+        <h1>Abastece+</h1>
+      </header>
+
+      {/* Área principal com cards */}
+      <main className="content">
+        <h2>Bem-vindo ao Abastece+</h2>
+        <p>Faça seus pedidos de forma rápida e segura.</p>
+
+        {/* Cards do painel */}
+        <div className="cards-container">
+          <div className="card">
+            <h3>Novo Pedido</h3>
+            <p>Solicite combustível em poucos cliques.</p>
+            <button className="btn-primary">Fazer Pedido</button>
+          </div>
+
+          <div className="card">
+            <h3>Meus Pedidos</h3>
+            <p>Acompanhe o status e histórico de pedidos.</p>
+            <button className="btn-secondary">Consultar</button>
+          </div>
+
+          <div className="card">
+            <h3>Contato</h3>
+            <p>Entre em contato com nosso suporte.</p>
+            <button className="btn-secondary">Falar com Suporte</button>
+          </div>
+        </div>
+
+        {mensagem && <p className="mensagem">{mensagem}</p>}
+      </main>
+    </div>
+  );
+}
+
+export default App;
+
 import { db } from "./firebase";
 import {
   collection,
