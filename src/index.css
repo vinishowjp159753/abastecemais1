@@ -1,5 +1,77 @@
+/* Fundo gradiente */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4caf50, #ffa726);
+  color: #333;
+}
+
+/* Container principal */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+/* Formulário */
+.form-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+/* Botão estilizado */
+.btn-primary {
+  background: #2e7d32;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #1b5e20;
+}
+
+/* Mensagem */
+.mensagem {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ffa726;
 }
