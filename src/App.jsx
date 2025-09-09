@@ -1,22 +1,3 @@
-function App() {
-  return (
-    <div>
-      {/* Header com a logo */}
-      <header className="header">
-        <img src="/logo.png" alt="Abastece+" className="logo" />
-      </header>
-
-      {/* Conteúdo do site */}
-      <div className="form-container">
-        <h1>Pedidos Combustível</h1>
-        {/* ... resto do seu código */}
-      </div>
-    </div>
-  );
-}
-
-export default App;
-
 import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import {
