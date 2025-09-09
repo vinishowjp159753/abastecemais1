@@ -11,7 +11,7 @@ import {
   orderBy,
   serverTimestamp
 } from "firebase/firestore";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "./email";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -115,7 +115,7 @@ export default function App() {
       };
 
       try {
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_USER_ID);
+        await sendEmail(templateParams);
       } catch (emailErr) {
         console.warn("Falha ao enviar e-mail via EmailJS:", emailErr);
       }
