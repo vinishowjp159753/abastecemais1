@@ -8,7 +8,7 @@ function App() {
     <div className="app-container">
       {/* Cabeçalho com logo */}
       <header className="header">
-        <img src="/logo.png" alt="Logo Abastece+" className="logo" />
+        <img assets="/logo.png" alt="Logo Abastece+" className="logo" />
         <h1>Abastece+</h1>
       </header>
 
